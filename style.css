@@ -44,7 +44,6 @@ button:focus-visible {
   border-radius: 2px;
 }
 
-/* Header: name on the left, language switcher on the right, menu below */
 .site-header {
   display: flex;
   justify-content: space-between;
@@ -71,7 +70,6 @@ button:focus-visible {
   text-underline-offset: 4px;
 }
 
-/* Language switcher */
 .lang {
   display: flex;
   border: 1px solid var(--line);
@@ -100,7 +98,6 @@ button:focus-visible {
   cursor: default;
 }
 
-/* Sections */
 section { padding: 4rem 0; border-top: 1px solid var(--line); }
 
 h1, h2, h3 { line-height: 1.15; letter-spacing: -0.02em; }
@@ -109,7 +106,6 @@ h2 { font-size: 1.6rem; font-weight: 800; margin-bottom: 0.6rem; }
 
 .intro { color: var(--muted); margin-bottom: 2rem; }
 
-/* Hero */
 .hero { border-top: none; padding: 4rem 0 5rem; }
 
 .hero h1 {
@@ -121,7 +117,6 @@ h2 { font-size: 1.6rem; font-weight: 800; margin-bottom: 0.6rem; }
 
 .lead { max-width: 36rem; color: var(--muted); font-size: 1.2rem; }
 
-/* Terminal: the most distinctive element of the profile */
 .terminal {
   margin-top: 3rem;
   background: var(--panel);
@@ -158,7 +153,6 @@ h2 { font-size: 1.6rem; font-weight: 800; margin-bottom: 0.6rem; }
 
 @keyframes blink { 50% { opacity: 0; } }
 
-/* Projects and certifications (same row layout; links are optional) */
 .projects { list-style: none; }
 
 .projects li { border-bottom: 1px solid var(--line); }
@@ -193,7 +187,6 @@ h2 { font-size: 1.6rem; font-weight: 800; margin-bottom: 0.6rem; }
   text-align: right;
 }
 
-/* Experience and education (timeline) */
 .timeline { list-style: none; margin-top: 1.5rem; border-left: 2px solid var(--line); }
 
 .timeline > li { padding: 0 0 2rem 1.5rem; position: relative; }
@@ -221,7 +214,6 @@ h2 { font-size: 1.6rem; font-weight: 800; margin-bottom: 0.6rem; }
 
 .timeline ul li { margin-top: 0.25rem; }
 
-/* Skills */
 .skills { margin-top: 1.5rem; }
 
 .skills div {
@@ -236,7 +228,6 @@ h2 { font-size: 1.6rem; font-weight: 800; margin-bottom: 0.6rem; }
 .skills dt { font-weight: 700; }
 .skills dd { color: var(--muted); }
 
-/* Contact */
 .contact p { color: var(--muted); }
 
 .mail {
@@ -254,7 +245,6 @@ h2 { font-size: 1.6rem; font-weight: 800; margin-bottom: 0.6rem; }
 .links { display: flex; gap: 1.5rem; flex-wrap: wrap; }
 .links a { color: var(--ink); }
 
-/* Footer */
 footer {
   border-top: 1px solid var(--line);
   padding: 2rem 0 3rem;
@@ -262,7 +252,6 @@ footer {
   font-size: 0.95rem;
 }
 
-/* Mobile */
 @media (max-width: 560px) {
   body { font-size: 1rem; }
   section { padding: 3rem 0; }
