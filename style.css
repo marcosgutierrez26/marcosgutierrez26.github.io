@@ -1,22 +1,22 @@
 :root {
-  --bg: #0f1c20;
-  --panel: #0a1316;
-  --ink: #e2ebe8;
-  --muted: #92a6a3;
-  --line: #243a3f;
-  --accent: #f0b44c;
+  --bg: #0e1526;
+  --panel: #080e1b;
+  --ink: #e4eaf7;
+  --muted: #94a3c4;
+  --line: #243252;
+  --accent: #5aa9ff;
   --text: "Schibsted Grotesk", "Helvetica Neue", Arial, sans-serif;
   --mono: "JetBrains Mono", ui-monospace, "Cascadia Code", Consolas, monospace;
 }
 
 @media (prefers-color-scheme: light) {
   :root {
-    --bg: #f1f3ef;
-    --panel: #14262b;
-    --ink: #16262a;
-    --muted: #566b69;
-    --line: #cdd6d2;
-    --accent: #a85f00;
+    --bg: #eff3fa;
+    --panel: #12203a;
+    --ink: #14213d;
+    --muted: #55668a;
+    --line: #cfd8ea;
+    --accent: #1f5fd1;
   }
 }
 
@@ -98,7 +98,8 @@ button:focus-visible {
   cursor: default;
 }
 
-section { padding: 4rem 0; border-top: 1px solid var(--line); }
+/* Sin línea separadora entre secciones y con menos espacio vacío */
+section { padding: 2.5rem 0; }
 
 h1, h2, h3 { line-height: 1.15; letter-spacing: -0.02em; }
 
@@ -106,7 +107,7 @@ h2 { font-size: 1.6rem; font-weight: 800; margin-bottom: 0.6rem; }
 
 .intro { color: var(--muted); margin-bottom: 2rem; }
 
-.hero { border-top: none; padding: 4rem 0 5rem; }
+.hero { padding: 3rem 0 3rem; }
 
 .hero h1 {
   font-size: clamp(2.5rem, 7.5vw, 4.4rem);
@@ -133,7 +134,7 @@ h2 { font-size: 1.6rem; font-weight: 800; margin-bottom: 0.6rem; }
   font-family: var(--mono);
   font-size: 0.9rem;
   line-height: 1.7;
-  color: #cfdcd9;
+  color: #cdd9ee;
   padding: 1.25rem 1.25rem 1.5rem;
   overflow-x: auto;
   white-space: pre;
@@ -254,8 +255,8 @@ footer {
 
 @media (max-width: 560px) {
   body { font-size: 1rem; }
-  section { padding: 3rem 0; }
-  .hero { padding: 2.5rem 0 3.5rem; }
+  section { padding: 2rem 0; }
+  .hero { padding: 2rem 0 2.5rem; }
   .projects li > a,
   .projects li > div { grid-template-columns: 1fr; }
   .p-tech { grid-column: 1; grid-row: auto; text-align: left; max-width: none; margin-top: 0.4rem; }

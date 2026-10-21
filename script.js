@@ -23,7 +23,6 @@ const translations = {
     p1_desc: "Registro práctico, día a día, de mi camino hacia DevOps en un Ubuntu Server: scripts de automatización en Bash, diagnósticos de red, Git, Docker y Docker Compose, infraestructura como código con Ansible y Terraform, CI/CD, Kubernetes, Prometheus y Grafana, y Python. Un paso cada día: un script nuevo, una mejora del anterior, una herramienta más.",
     p2_title: "Laboratorio de control de acceso en PostgreSQL",
     p2_desc: "Despliegue de PostgreSQL con Docker y configuración de bases de datos, usuarios, roles, vistas y permisos de acceso granulares. Implementación de restricciones de privilegios y procedimientos de copia de seguridad y restauración.",
-    coming_soon: "Próximamente...",
 
     exp_title: "Experiencia laboral",
     exp1_title: "Trainee de cloud y seguridad · Accenture",
@@ -85,7 +84,6 @@ const translations = {
     p1_desc: "Praktisches Tagebuch meines Wegs in DevOps auf einem Ubuntu Server, Tag für Tag: Bash-Automatisierungsskripte, Netzwerkdiagnose, Git, Docker und Docker Compose, Infrastructure as Code mit Ansible und Terraform, CI/CD, Kubernetes, Prometheus und Grafana sowie Python. Jeden Tag ein Schritt: ein neues Skript, eine Verbesserung des vorherigen, ein weiteres Werkzeug.",
     p2_title: "PostgreSQL-Zugriffskontroll-Labor",
     p2_desc: "Bereitstellung von PostgreSQL mit Docker und Konfiguration von Datenbanken, Benutzern, Rollen, Views und feingranularen Zugriffsrechten. Umsetzung von Rechtebeschränkungen sowie Backup- und Wiederherstellungsverfahren.",
-    coming_soon: "Demnächst...",
 
     exp_title: "Berufserfahrung",
     exp1_title: "Trainee Cloud & Sicherheit · Accenture",
