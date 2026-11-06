@@ -3,6 +3,7 @@ const translations = {
     meta_title: "Marcos Gutiérrez de los Reyes · ASIR y DevOps",
     meta_description: "Portfolio de Marcos Gutiérrez de los Reyes: técnico en administración de sistemas informáticos en red orientado a DevOps, automatización e infraestructura cloud.",
     terminal_label: "Terminal con un resumen del perfil",
+    lang_label: "Idioma",
 
     nav_projects: "Proyectos",
     nav_experience: "Experiencia",
@@ -64,6 +65,7 @@ const translations = {
     meta_title: "Marcos Gutiérrez de los Reyes · ASIR und DevOps",
     meta_description: "Portfolio von Marcos Gutiérrez de los Reyes: Techniker für Netzwerk-Systemadministration mit Weg in DevOps, Automatisierung und Cloud-Infrastruktur.",
     terminal_label: "Terminal mit einer Profilzusammenfassung",
+    lang_label: "Sprache",
 
     nav_projects: "Projekte",
     nav_experience: "Erfahrung",
@@ -112,7 +114,7 @@ const translations = {
     sk3_d: "Härtung, Schwachstellenanalyse, Nmap, Wireshark, Logs",
     sk4_t: "Scripting",
     sk5_t: "Sprachen",
-    sk5_d: "Englisch B2, Deutsch A1, Muttersprache Spanisch",
+    sk5_d: "Englisch B2, Deutsch A1, Spanisch (Muttersprache)",
     sk6_t: "Cloud & DevOps",
     sk6_d: "AWS, Docker · in Lernphase: CI/CD, Terraform, Ansible",
 
@@ -125,12 +127,16 @@ const translations = {
 (function () {
   const elements = document.querySelectorAll("[data-i18n]");
   const buttons = document.querySelectorAll(".lang button");
+  const langGroup = document.querySelector(".lang");
   const metaDescription = document.querySelector('meta[name="description"]');
   const terminal = document.querySelector(".terminal");
+
+  // El inglés se toma directamente del HTML, que es la versión original.
   const en = {
     meta_title: document.title,
-    meta_description: metaDescription.getAttribute("content"),
-    terminal_label: terminal.getAttribute("aria-label")
+    meta_description: metaDescription ? metaDescription.getAttribute("content") : "",
+    terminal_label: terminal ? terminal.getAttribute("aria-label") : "",
+    lang_label: langGroup ? langGroup.getAttribute("aria-label") : ""
   };
   elements.forEach(function (el) {
     en[el.dataset.i18n] = el.textContent;
@@ -146,21 +152,23 @@ const translations = {
     });
 
     document.documentElement.lang = lang;
-    document.title = dict.meta_title;
-    metaDescription.setAttribute("content", dict.meta_description);
-    terminal.setAttribute("aria-label", dict.terminal_label);
+    if (dict.meta_title) document.title = dict.meta_title;
+    if (metaDescription && dict.meta_description) metaDescription.setAttribute("content", dict.meta_description);
+    if (terminal && dict.terminal_label) terminal.setAttribute("aria-label", dict.terminal_label);
+    if (langGroup && dict.lang_label) langGroup.setAttribute("aria-label", dict.lang_label);
 
     buttons.forEach(function (btn) {
       btn.setAttribute("aria-pressed", String(btn.dataset.lang === lang));
     });
 
-    try { localStorage.setItem("lang", lang); } catch (e) {  }
+    try { localStorage.setItem("lang", lang); } catch (e) { /* almacenamiento no disponible */ }
   }
 
   buttons.forEach(function (btn) {
     btn.addEventListener("click", function () { setLanguage(btn.dataset.lang); });
   });
+
   let saved = "en";
-  try { saved = localStorage.getItem("lang") || "en"; } catch (e) {  }
+  try { saved = localStorage.getItem("lang") || "en"; } catch (e) { /* almacenamiento no disponible */ }
   if (saved !== "en" && translations[saved]) setLanguage(saved);
 })();
