@@ -30,7 +30,7 @@ body {
   font-family: var(--text);
   font-size: 1.0625rem;
   line-height: 1.65;
-  max-width: 48rem;
+  max-width: 58rem;
   margin: 0 auto;
   padding: 0 1.5rem;
 }
@@ -43,6 +43,20 @@ button:focus-visible {
   outline-offset: 3px;
   border-radius: 2px;
 }
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -4rem;
+  padding: 0.5rem 1rem;
+  background: var(--accent);
+  color: var(--bg);
+  font-weight: 700;
+  border-radius: 6px;
+  z-index: 10;
+}
+
+.skip-link:focus { top: 1rem; }
 
 .site-header {
   display: flex;
@@ -62,7 +76,7 @@ button:focus-visible {
   flex-wrap: wrap;
 }
 
-.site-header nav a { color: var(--muted); text-decoration: none; }
+.site-header nav a { color: var(--muted); text-decoration: none; white-space: nowrap; }
 
 .site-header nav a:hover {
   color: var(--ink);
@@ -118,8 +132,101 @@ h2 { font-size: 1.6rem; font-weight: 800; margin-bottom: 0.6rem; }
 
 .lead { max-width: 36rem; color: var(--muted); font-size: 1.2rem; }
 
+.avail {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-top: 1.5rem;
+  font-family: var(--mono);
+  font-size: 0.9rem;
+  color: var(--ink);
+}
+
+.avail .dot {
+  flex: none;
+  width: 0.55rem;
+  height: 0.55rem;
+  border-radius: 50%;
+  background: #3ddc84;
+  box-shadow: 0 0 0 4px rgba(61, 220, 132, 0.2);
+  animation: pulse 2s ease-out infinite;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(61, 220, 132, 0.55); }
+  100% { box-shadow: 0 0 0 10px rgba(61, 220, 132, 0); }
+}
+
+/* Resplandor suave detrás del hero */
+.hero { position: relative; isolation: isolate; }
+
+.hero::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: -2rem -1.5rem auto -1.5rem;
+  height: 28rem;
+  background:
+    radial-gradient(40rem 18rem at 15% 0%, color-mix(in srgb, var(--accent) 22%, transparent), transparent 70%),
+    radial-gradient(28rem 14rem at 90% 30%, rgba(61, 220, 132, 0.10), transparent 70%);
+  pointer-events: none;
+}
+
+/* Título del hero con degradado */
+.hero h1 {
+  background: linear-gradient(100deg, var(--ink) 35%, var(--accent));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Icono con degradado delante de cada título de sección */
+h2 { display: flex; align-items: center; gap: 0.6rem; }
+
+h2::before {
+  content: "";
+  flex: none;
+  width: 1.6rem;
+  height: 1.6rem;
+  background: linear-gradient(135deg, var(--accent), #3ddc84);
+  -webkit-mask: var(--icon) center / contain no-repeat;
+  mask: var(--icon) center / contain no-repeat;
+}
+
+#projects h2 { --icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='4 17 10 11 4 5'/%3E%3Cline x1='12' x2='20' y1='19' y2='19'/%3E%3C/svg%3E"); }
+#experience h2 { --icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect width='20' height='14' x='2' y='7' rx='2'/%3E%3Cpath d='M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16'/%3E%3C/svg%3E"); }
+#education h2 { --icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M22 10v6M2 10l10-5 10 5-10 5z'/%3E%3Cpath d='M6 12v5c3 3 9 3 12 0v-5'/%3E%3C/svg%3E"); }
+#certifications h2 { --icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='8' r='6'/%3E%3Cpath d='M15.477 12.89 17 22l-5-3-5 3 1.523-9.11'/%3E%3C/svg%3E"); }
+#skills h2 { --icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='4' y='4' width='16' height='16' rx='2'/%3E%3Crect x='9' y='9' width='6' height='6'/%3E%3Cpath d='M9 2v2M15 2v2M9 20v2M15 20v2M2 9h2M2 15h2M20 9h2M20 15h2'/%3E%3C/svg%3E"); }
+#contact h2 { --icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect width='20' height='16' x='2' y='4' rx='2'/%3E%3Cpath d='m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7'/%3E%3C/svg%3E"); }
+
+/* Flecha en las filas que son enlaces */
+.projects li > a .p-title::after {
+  content: " \2197";
+  color: var(--accent);
+  opacity: 0;
+  display: inline-block;
+  transform: translate(-0.3rem, 0.3rem);
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.projects li > a:hover .p-title::after,
+.projects li > a:focus-visible .p-title::after {
+  opacity: 1;
+  transform: none;
+}
+
+/* Aparición suave al hacer scroll (la activa el script) */
+.js .reveal {
+  opacity: 0;
+  transform: translateY(1.25rem);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.js .reveal.in { opacity: 1; transform: none; }
+
 .terminal {
-  margin-top: 3rem;
+  margin-top: 2rem;
   background: var(--panel);
   border: 1px solid var(--line);
   border-radius: 8px;
@@ -202,6 +309,7 @@ h2 { font-size: 1.6rem; font-weight: 800; margin-bottom: 0.6rem; }
   height: 0.7rem;
   border-radius: 50%;
   background: var(--accent);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--accent) 22%, transparent);
 }
 
 .timeline h3 { font-size: 1.15rem; font-weight: 700; }
@@ -246,6 +354,25 @@ h2 { font-size: 1.6rem; font-weight: 800; margin-bottom: 0.6rem; }
 .links { display: flex; gap: 1.5rem; flex-wrap: wrap; }
 .links a { color: var(--ink); }
 
+.cv { display: flex; align-items: center; flex-wrap: wrap; gap: 0.6rem; }
+
+.cv > span { color: var(--ink); margin-right: 0.2rem; }
+
+.links a.cv-btn {
+  text-decoration: none;
+  font-size: 0.9rem;
+  padding: 0.25rem 0.8rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  transition: border-color 0.2s ease, color 0.2s ease, background 0.2s ease;
+}
+
+.links a.cv-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 10%, transparent);
+}
+
 footer {
   border-top: 1px solid var(--line);
   padding: 2rem 0 3rem;
@@ -263,7 +390,38 @@ footer {
   .skills div { grid-template-columns: 1fr; gap: 0.1rem; }
 }
 
+.to-top {
+  position: fixed;
+  right: 1.25rem;
+  bottom: 1.25rem;
+  width: 2.75rem;
+  height: 2.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--accent);
+  color: var(--bg);
+  border: 0;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.35);
+  opacity: 0;
+  transform: translateY(0.5rem);
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.to-top.visible { opacity: 1; transform: none; pointer-events: auto; }
+
+#home:focus { outline: none; }
+
+.to-top:hover { filter: brightness(1.1); }
+
 @media (prefers-reduced-motion: reduce) {
+  .avail .dot { animation: none; }
+  .js .reveal { opacity: 1; transform: none; transition: none; }
+  .projects li > a .p-title::after { transition: none; }
+  .to-top { transition: none; }
   html { scroll-behavior: auto; }
   .projects li > a { transition: none; }
   .cursor { animation: none; }

@@ -4,7 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Marcos Gutiérrez de los Reyes · ASIR and DevOps</title>
-  <meta name="description" content="Portfolio of Marcos Gutiérrez de los Reyes: network systems administration technician moving into DevOps, automation and cloud infrastructure.">
+  <meta name="description" content="Portfolio of Marcos Gutiérrez de los Reyes: network systems administration technician moving into DevOps, automation and cloud infrastructure">
+  <meta name="theme-color" content="#0e1526">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Marcos Gutiérrez de los Reyes · ASIR and DevOps">
+  <meta property="og:description" content="Network systems administration technician moving into DevOps, automation and cloud infrastructure">
+  <meta name="twitter:card" content="summary">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%230e1526'/%3E%3Ctext x='32' y='42' font-family='monospace' font-size='28' font-weight='700' fill='%235aa9ff' text-anchor='middle'%3E%26gt;_%3C/text%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:wght@400;500;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -12,6 +18,8 @@
   <script src="script.js" defer></script>
 </head>
 <body>
+
+  <a class="skip-link" href="#main" data-i18n="skip_link">Skip to content</a>
 
   <header class="site-header">
     <a class="logo" href="#home">Marcos Gutiérrez de los Reyes</a>
@@ -24,16 +32,18 @@
       <a href="#projects" data-i18n="nav_projects">Projects</a>
       <a href="#experience" data-i18n="nav_experience">Experience</a>
       <a href="#education" data-i18n="nav_education">Education &amp; Training</a>
-      <a href="#certifications" data-i18n="nav_certifications">Certifications</a>
+      <a href="#certifications" data-i18n="nav_certifications">Certifications &amp; Courses</a>
       <a href="#skills" data-i18n="nav_skills">Skills</a>
       <a href="#contact" data-i18n="nav_contact">Contact</a>
     </nav>
   </header>
 
-  <main>
-    <section class="hero" id="home">
-      <h1 data-i18n="hero_title">I automate systems and learn how to ship them.</h1>
-      <p class="lead" data-i18n="hero_lead">ASIR student with a systems and networking background, moving into DevOps, CI/CD and cloud infrastructure.</p>
+  <main id="main">
+    <section class="hero" id="home" tabindex="-1">
+      <h1 data-i18n="hero_title">I automate systems and learn how to ship them</h1>
+      <p class="lead" data-i18n="hero_lead">ASIR student with a systems and networking background, moving into DevOps, CI/CD and cloud infrastructure</p>
+
+      <p class="avail"><span class="dot" aria-hidden="true"></span><span data-i18n="hero_avail">Open to a first DevOps / cloud role</span></p>
 
       <div class="terminal" role="img" aria-label="Terminal showing a profile summary">
         <div class="t-bar"><span></span><span></span><span></span></div>
@@ -48,25 +58,25 @@ marcos
 Linux · Docker · CI/CD · Terraform · Ansible
 
 <span class="prompt">$</span> cat status.txt
-<span data-i18n="term_status">Building pipelines and learning cloud.</span><span class="cursor"></span></pre>
+<span data-i18n="term_status">Building pipelines and learning cloud</span><span class="cursor"></span></pre>
       </div>
     </section>
 
     <section id="projects">
       <h2 data-i18n="projects_title">Projects</h2>
-      <p class="intro" data-i18n="projects_intro">Practice labs and setups I built myself.</p>
+      <p class="intro" data-i18n="projects_intro">Practice labs and setups I built myself</p>
       <ul class="projects">
         <li>
           <a href="https://github.com/marcosgutierrez26/devops-lab">
             <span class="p-title" data-i18n="p1_title">DevOps Daily Lab — Ubuntu Server</span>
-            <span class="p-desc" data-i18n="p1_desc">A hands-on, day-by-day log of my path into DevOps on an Ubuntu Server: Bash automation scripts, network diagnostics, Git, Docker and Docker Compose, Infrastructure as Code with Ansible and Terraform, CI/CD, Kubernetes, Prometheus and Grafana, and Python. One step per day: a new script, an improvement of the previous one, one more tool.</span>
+            <span class="p-desc" data-i18n="p1_desc">A hands-on, day-by-day log of my path into DevOps on an Ubuntu Server: Bash automation scripts, network diagnostics, Git, Docker and Docker Compose, Infrastructure as Code with Ansible and Terraform, CI/CD, Kubernetes, Prometheus and Grafana, and Python. One step per day: a new script, an improvement of the previous one, one more tool</span>
             <span class="p-tech">Ubuntu · Bash · Docker · Ansible · Terraform · Kubernetes · Python</span>
           </a>
         </li>
         <li>
           <a href="https://github.com/marcosgutierrez26/postgresql-pagila">
             <span class="p-title" data-i18n="p2_title">PostgreSQL Access Control Lab</span>
-            <span class="p-desc" data-i18n="p2_desc">Deployed PostgreSQL with Docker and configured databases, users, roles, views and granular access permissions. Implemented privilege restrictions and backup/restore procedures.</span>
+            <span class="p-desc" data-i18n="p2_desc">Deployed PostgreSQL with Docker and configured databases, users, roles, views and granular access permissions. Implemented privilege restrictions and backup/restore procedures</span>
             <span class="p-tech">Docker · PostgreSQL · SQL · Linux</span>
           </a>
         </li>
@@ -79,16 +89,16 @@ Linux · Docker · CI/CD · Terraform · Ansible
         <li>
           <h3 data-i18n="exp1_title">Cloud &amp; Security Trainee · Accenture</h3>
           <p class="when" data-i18n="exp1_when">04/2026 - 05/2026 · Madrid, Spain</p>
-          <p data-i18n="exp1_desc">Professional training experience with coursework and practical learning in cloud computing, cryptography and security fundamentals, building a base for secure infrastructure and automation.</p>
+          <p data-i18n="exp1_desc">Professional training experience with coursework and practical learning in cloud computing, cryptography and security fundamentals, building a base for secure infrastructure and automation</p>
           <ul>
             <li data-i18n="exp1_b1">Completed training in AWS, cryptography and cybersecurity fundamentals</li>
-            <li data-i18n="exp1_b2">Developed knowledge through technical courses and hands-on exercises.</li>
+            <li data-i18n="exp1_b2">Developed knowledge through technical courses and hands-on exercises</li>
           </ul>
         </li>
         <li>
           <h3 data-i18n="exp2_title">Sales Assistant · JD Sports</h3>
           <p class="when" data-i18n="exp2_when">06/2025 - present · Madrid, Spain</p>
-          <p data-i18n="exp2_desc">Customer service, sales support and day-to-day store operations in a fast-paced retail environment.</p>
+          <p data-i18n="exp2_desc">Customer service, sales support and day-to-day store operations in a fast-paced retail environment</p>
         </li>
       </ul>
     </section>
@@ -99,32 +109,32 @@ Linux · Docker · CI/CD · Terraform · Ansible
         <li>
           <h3 data-i18n="edu1_title">Cloud &amp; security training · Accenture</h3>
           <p class="when" data-i18n="edu1_when">2026 – present</p>
-          <p data-i18n="edu1_desc">Developing practical skills through hands-on training in AWS, cryptography and security fundamentals. Building on my systems and networking background to work towards DevOps: automation, CI/CD and secure delivery of infrastructure.</p>
+          <p data-i18n="edu1_desc">Developing practical skills through hands-on training in AWS, cryptography and security fundamentals. Building on my systems and networking background to work towards DevOps: automation, CI/CD and secure delivery of infrastructure</p>
         </li>
         <li>
           <h3 data-i18n="edu2_title">Higher Vocational Training (CFGS) in Network IT Systems Administration (ASIR)</h3>
           <p class="when" data-i18n="edu2_when">2025 - present · XTART FP</p>
-          <p data-i18n="edu2_desc">Hands-on training in operating systems, networking, system administration, databases and cybersecurity, with a strong focus on practical labs and infrastructure management.</p>
+          <p data-i18n="edu2_desc">Hands-on training in operating systems, networking, system administration, databases and cybersecurity, with a strong focus on practical labs and infrastructure management</p>
         </li>
       </ul>
     </section>
 
     <section id="certifications">
-      <h2 data-i18n="cert_title">Certifications</h2>
+      <h2 data-i18n="cert_title">Certifications &amp; Courses</h2>
       <ul class="projects">
         <li>
-          <div>
+          <a href="https://www.credly.com/earner/earned/badge/6d2efbd3-e63f-40c7-8d8a-0c00ca196853" target="_blank" rel="noopener">
             <span class="p-title">AWS Academy Graduate - Cloud Operations - Training Badge</span>
             <span class="p-desc">Amazon</span>
             <span class="p-tech">11/2026</span>
-          </div>
+          </a>
         </li>
         <li>
-          <div>
+          <a href="https://www.credly.com/earner/earned/badge/827ff42e-2995-4867-af18-e5a557e059cd" target="_blank" rel="noopener">
             <span class="p-title">AWS Academy Graduate - Cloud Foundations - Training Badge</span>
             <span class="p-desc">Amazon</span>
             <span class="p-tech">04/2026</span>
-          </div>
+          </a>
         </li>
         <li>
           <div>
@@ -140,7 +150,8 @@ Linux · Docker · CI/CD · Terraform · Ansible
       <h2 data-i18n="skills_title">Skills</h2>
       <dl class="skills">
         <div><dt data-i18n="sk1_t">Systems</dt><dd>Windows Server, Linux (Debian, Ubuntu), Active Directory</dd></div>
-        <div><dt data-i18n="sk6_t">Cloud &amp; DevOps</dt><dd data-i18n="sk6_d">AWS, Docker · learning: CI/CD, Terraform, Ansible</dd></div>
+        <div><dt data-i18n="sk6_t">Cloud &amp; DevOps</dt><dd>AWS, Docker</dd></div>
+        <div><dt data-i18n="sk7_t">Learning now</dt><dd>Terraform, Ansible, CI/CD (GitHub Actions), Kubernetes</dd></div>
         <div><dt data-i18n="sk4_t">Scripting</dt><dd>Bash, PowerShell, Python</dd></div>
         <div><dt data-i18n="sk2_t">Networking</dt><dd>TCP/IP, VLANs, DNS, DHCP, VPN</dd></div>
         <div><dt data-i18n="sk3_t">Security</dt><dd data-i18n="sk3_d">Hardening, vulnerability analysis, Nmap, Wireshark, logs</dd></div>
@@ -150,18 +161,28 @@ Linux · Docker · CI/CD · Terraform · Ansible
 
     <section id="contact" class="contact">
       <h2 data-i18n="contact_title">Contact</h2>
-      <p data-i18n="contact_text">If you are looking for someone eager to learn and work hard, get in touch.</p>
+      <p data-i18n="contact_text">If you are looking for someone eager to learn and work hard, get in touch</p>
       <a class="mail" href="mailto:gutimarcos34@gmail.com">gutimarcos34@gmail.com</a>
       <p class="links">
         <a href="https://github.com/marcosgutierrez26">GitHub</a>
         <a href="https://www.linkedin.com/in/marcos-guti%C3%A9rrez-de-los-reyes-/">LinkedIn</a>
-        <a href="./Cv_Marcos_Gutierrez.pdf" target="_blank" rel="noopener" data-i18n="contact_cv">Download CV</a>      </p>
+        <span class="cv">
+          <span data-i18n="contact_cv">Download CV</span>
+          <a class="cv-btn" href="./Cv_Marcos_Gutierrez_ES.pdf" target="_blank" rel="noopener" hreflang="es" lang="es">Español</a>
+          <a class="cv-btn" href="./Cv_Marcos_Gutierrez_EN.pdf" target="_blank" rel="noopener" hreflang="en" lang="en">English</a>
+          <a class="cv-btn" href="./Cv_Marcos_Gutierrez_DE.pdf" target="_blank" rel="noopener" hreflang="de" lang="de">Deutsch</a>
+        </span>
+      </p>
     </section>
   </main>
 
   <footer>
     <p>© 2026 Marcos Gutiérrez de los Reyes</p>
   </footer>
+
+  <button type="button" class="to-top" aria-label="Back to top" title="Back to top" hidden>
+    <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+  </button>
 
 </body>
 </html>
