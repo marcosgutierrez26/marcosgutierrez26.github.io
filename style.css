@@ -180,26 +180,6 @@ h2 { font-size: 1.6rem; font-weight: 800; margin-bottom: 0.6rem; }
   color: transparent;
 }
 
-/* Icono con degradado delante de cada título de sección */
-h2 { display: flex; align-items: center; gap: 0.6rem; }
-
-h2::before {
-  content: "";
-  flex: none;
-  width: 1.6rem;
-  height: 1.6rem;
-  background: linear-gradient(135deg, var(--accent), #3ddc84);
-  -webkit-mask: var(--icon) center / contain no-repeat;
-  mask: var(--icon) center / contain no-repeat;
-}
-
-#projects h2 { --icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='4 17 10 11 4 5'/%3E%3Cline x1='12' x2='20' y1='19' y2='19'/%3E%3C/svg%3E"); }
-#experience h2 { --icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect width='20' height='14' x='2' y='7' rx='2'/%3E%3Cpath d='M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16'/%3E%3C/svg%3E"); }
-#education h2 { --icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M22 10v6M2 10l10-5 10 5-10 5z'/%3E%3Cpath d='M6 12v5c3 3 9 3 12 0v-5'/%3E%3C/svg%3E"); }
-#certifications h2 { --icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='8' r='6'/%3E%3Cpath d='M15.477 12.89 17 22l-5-3-5 3 1.523-9.11'/%3E%3C/svg%3E"); }
-#skills h2 { --icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='4' y='4' width='16' height='16' rx='2'/%3E%3Crect x='9' y='9' width='6' height='6'/%3E%3Cpath d='M9 2v2M15 2v2M9 20v2M15 20v2M2 9h2M2 15h2M20 9h2M20 15h2'/%3E%3C/svg%3E"); }
-#contact h2 { --icon: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect width='20' height='16' x='2' y='4' rx='2'/%3E%3Cpath d='m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7'/%3E%3C/svg%3E"); }
-
 /* Flecha en las filas que son enlaces */
 .projects li > a .p-title::after {
   content: " \2197";
@@ -224,42 +204,6 @@ h2::before {
 }
 
 .js .reveal.in { opacity: 1; transform: none; }
-
-.terminal {
-  margin-top: 2rem;
-  background: var(--panel);
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  overflow: hidden;
-}
-
-.t-bar { display: flex; gap: 0.4rem; padding: 0.7rem 1rem; border-bottom: 1px solid var(--line); }
-
-.t-bar span { width: 0.65rem; height: 0.65rem; border-radius: 50%; background: var(--line); }
-
-.terminal pre {
-  font-family: var(--mono);
-  font-size: 0.9rem;
-  line-height: 1.7;
-  color: #cdd9ee;
-  padding: 1.25rem 1.25rem 1.5rem;
-  overflow-x: auto;
-  white-space: pre;
-}
-
-.prompt { color: var(--accent); }
-
-.cursor {
-  display: inline-block;
-  width: 0.55em;
-  height: 1.1em;
-  margin-left: 0.2em;
-  vertical-align: text-bottom;
-  background: var(--accent);
-  animation: blink 1.1s steps(1) infinite;
-}
-
-@keyframes blink { 50% { opacity: 0; } }
 
 .projects { list-style: none; }
 
@@ -424,5 +368,155 @@ footer {
   .to-top { transition: none; }
   html { scroll-behavior: auto; }
   .projects li > a { transition: none; }
-  .cursor { animation: none; }
+}
+/* Hoja de ruta del laboratorio */
+.roadmap {
+  margin-top: 2.5rem;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: color-mix(in srgb, var(--bg) 85%, var(--accent) 4%);
+}
+
+.rm-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  padding: 0.8rem 1.25rem;
+  border-bottom: 1px solid var(--line);
+  font-family: var(--mono);
+  font-size: 0.82rem;
+}
+
+.rm-title { color: var(--ink); font-weight: 500; }
+.rm-link { color: var(--muted); text-underline-offset: 3px; }
+.rm-link:hover { color: var(--accent); }
+
+.stages {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  padding: 1.6rem 0.75rem 1.2rem;
+}
+
+.stages li {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 0.3rem;
+}
+
+.node {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  border: 2px solid var(--line);
+  background: var(--bg);
+  margin-bottom: 0.75rem;
+  position: relative;
+  z-index: 1;
+}
+
+.stages li.done .node { background: var(--accent); border-color: var(--accent); }
+.stages li.now .node { border-color: var(--accent); animation: ring 2s ease-out infinite; }
+
+@keyframes ring {
+  0% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--accent) 55%, transparent); }
+  100% { box-shadow: 0 0 0 9px color-mix(in srgb, var(--accent) 0%, transparent); }
+}
+
+/* Tramo que une cada etapa con la siguiente */
+.stages li:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: calc(0.5rem - 1px);
+  left: calc(50% + 0.75rem);
+  width: calc(100% - 1.5rem);
+  height: 2px;
+  background: var(--line);
+}
+
+.stages li.done:not(:last-child)::after {
+  background: linear-gradient(90deg, var(--accent) 0 40%, color-mix(in srgb, var(--accent) 35%, white) 50%, var(--accent) 60% 100%);
+  background-size: 300% 100%;
+  animation: flow 2.4s linear infinite;
+}
+
+.stages li.done:nth-child(2)::after { animation-delay: 1.2s; }
+
+@keyframes flow {
+  from { background-position: 100% 0; }
+  to { background-position: 0 0; }
+}
+
+.s-name { font-weight: 700; font-size: 0.92rem; line-height: 1.25; }
+.s-tech { font-family: var(--mono); font-size: 0.72rem; color: var(--muted); margin-top: 0.3rem; }
+.stages li:not(.done):not(.now) .s-name { color: var(--muted); }
+
+.legend {
+  display: flex;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+  padding: 0.8rem 1.25rem;
+  border-top: 1px solid var(--line);
+  font-family: var(--mono);
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+.lg { display: inline-flex; align-items: center; gap: 0.45rem; }
+.lg::before {
+  content: "";
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: 50%;
+  border: 2px solid var(--line);
+}
+.lg.done::before { background: var(--accent); border-color: var(--accent); }
+.lg.now::before { border-color: var(--accent); }
+
+.sr {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+@media (max-width: 720px) {
+  .stages { grid-template-columns: 1fr; row-gap: 1.3rem; padding: 1.4rem 1.25rem; }
+  .stages li {
+    display: grid;
+    grid-template-columns: 1rem 1fr;
+    column-gap: 0.9rem;
+    align-items: start;
+    text-align: left;
+    padding: 0;
+  }
+  .node { grid-row: 1 / span 2; margin: 0.15rem 0 0; }
+  .s-tech { grid-column: 2; margin-top: 0.1rem; }
+  .stages li:not(:last-child)::after {
+    top: 1.45rem;
+    left: calc(0.5rem - 1px);
+    width: 2px;
+    height: calc(100% + 1.3rem - 1.6rem);
+  }
+  .stages li.done:not(:last-child)::after {
+    background: linear-gradient(180deg, var(--accent) 0 40%, color-mix(in srgb, var(--accent) 35%, white) 50%, var(--accent) 60% 100%);
+    background-size: 100% 300%;
+    animation-name: flow-down;
+  }
+}
+
+@keyframes flow-down {
+  from { background-position: 0 100%; }
+  to { background-position: 0 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .stages li.done:not(:last-child)::after,
+  .stages li.now .node { animation: none; }
 }

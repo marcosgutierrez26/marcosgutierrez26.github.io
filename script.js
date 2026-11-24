@@ -1,8 +1,7 @@
 const translations = {
   es: {
-    meta_title: "Marcos Gutiérrez de los Reyes · ASIR y DevOps",
-    meta_description: "Portfolio de Marcos Gutiérrez de los Reyes: técnico en administración de sistemas informáticos en red orientado a DevOps, automatización e infraestructura cloud",
-    terminal_label: "Terminal con un resumen del perfil",
+    meta_title: "Marcos Gutiérrez de los Reyes · Cloud y DevSecOps",
+    meta_description: "Portfolio de Marcos Gutiérrez de los Reyes: estudiante de ASIR con especialización en ciberseguridad, orientado a cloud en AWS y DevSecOps",
     lang_label: "Idioma",
     top_label: "Volver arriba",
 
@@ -14,16 +13,23 @@ const translations = {
     nav_skills: "Habilidades",
     nav_contact: "Contacto",
 
-    hero_title: "Automatizo sistemas y aprendo a desplegarlos",
-    hero_lead: "Estudiante de ASIR con base en sistemas y redes, orientándome hacia DevOps, CI/CD e infraestructura cloud",
-    term_line1: "ASIR · Administración de Sistemas Informáticos en Red",
-    term_line2: "Formación en AWS y seguridad · Accenture",
-    term_status: "Construyendo pipelines y aprendiendo cloud",
+    hero_title: "Construyo infraestructura y aprendo a hacerla segura desde el principio",
+    hero_lead: "Estudiante de ASIR con especialización en ciberseguridad, orientándome hacia cloud en AWS y DevSecOps: infraestructura segura, automatización y seguridad integrada en CI/CD",
+    rm_link: "Ver en GitHub",
+    rm_done: "Hecho",
+    rm_now: "En curso",
+    rm_next: "Siguiente",
+    st1: "Linux y scripting",
+    st2: "Contenedores",
+    st3: "Bastionado",
+    st4: "Análisis de seguridad",
+    st5: "Controles en CI/CD",
+    st6: "IaC en la nube",
 
     projects_title: "Proyectos",
     projects_intro: "Laboratorios y entornos de práctica que he montado yo mismo",
-    p1_title: "Laboratorio DevOps diario — Ubuntu Server",
-    p1_desc: "Registro práctico, día a día, de mi camino hacia DevOps en un Ubuntu Server: scripts de automatización en Bash, diagnósticos de red, Git, Docker y Docker Compose, infraestructura como código con Ansible y Terraform, CI/CD, Kubernetes, Prometheus y Grafana, y Python. Un paso cada día: un script nuevo, una mejora del anterior, una herramienta más",
+    p1_title: "Laboratorio DevSecOps — Ubuntu Server",
+    p1_desc: "Laboratorio práctico que aplica seguridad en cada capa, documentado paso a paso. Hasta ahora: scripts de monitorización en Bash y Python y una API en Flask contenerizada. Lo siguiente: bastionado de Linux, imágenes de contenedor seguras, controles de seguridad en CI/CD con GitHub Actions y Terraform en AWS",
     p2_title: "Laboratorio de control de acceso en PostgreSQL",
     p2_desc: "Despliegue de PostgreSQL con Docker y configuración de bases de datos, usuarios, roles, vistas y permisos de acceso granulares. Implementación de restricciones de privilegios y procedimientos de copia de seguridad y restauración",
 
@@ -40,7 +46,7 @@ const translations = {
     edu_title: "Formación",
     edu1_title: "Formación en cloud y seguridad · Accenture",
     edu1_when: "2026 – actualidad",
-    edu1_desc: "Desarrollo de habilidades prácticas mediante formación en AWS, criptografía y fundamentos de seguridad. Apoyándome en mi base de sistemas y redes para avanzar hacia DevOps: automatización, CI/CD y despliegue seguro de infraestructura",
+    edu1_desc: "Desarrollo de habilidades prácticas mediante formación en AWS, criptografía y fundamentos de seguridad. Apoyándome en mi base de sistemas y redes para avanzar hacia cloud y DevSecOps: infraestructura segura, automatización y seguridad integrada en CI/CD",
     edu2_title: "CFGS Administración de Sistemas Informáticos en Red (ASIR)",
     edu2_when: "2025 - actualidad · XTART FP",
     edu2_desc: "Formación práctica en sistemas operativos, redes, administración de sistemas, bases de datos y ciberseguridad, con gran énfasis en laboratorios prácticos y gestión de infraestructuras",
@@ -55,9 +61,9 @@ const translations = {
     sk4_t: "Scripting",
     sk5_t: "Idiomas",
     sk5_d: "Inglés B2, alemán A1, español nativo",
-    sk6_t: "Cloud y DevOps",
+    sk6_t: "Cloud y DevSecOps",
     sk7_t: "Aprendiendo ahora",
-    hero_avail: "Buscando mi primer puesto en DevOps / cloud",
+    hero_avail: "Abierto a oportunidades en cloud y DevSecOps",
 
     contact_title: "Contacto",
     contact_text: "Si buscas a alguien con ganas de aprender y de trabajar, escríbeme",
@@ -65,9 +71,8 @@ const translations = {
   },
 
   de: {
-    meta_title: "Marcos Gutiérrez de los Reyes · ASIR und DevOps",
-    meta_description: "Portfolio von Marcos Gutiérrez de los Reyes: Techniker für Netzwerk-Systemadministration mit Weg in DevOps, Automatisierung und Cloud-Infrastruktur",
-    terminal_label: "Terminal mit einer Profilzusammenfassung",
+    meta_title: "Marcos Gutiérrez de los Reyes · Cloud & DevSecOps",
+    meta_description: "Portfolio von Marcos Gutiérrez de los Reyes: ASIR-Student mit Spezialisierung in Cybersicherheit und Fokus auf AWS-Cloud und DevSecOps",
     lang_label: "Sprache",
     top_label: "Nach oben",
 
@@ -79,16 +84,23 @@ const translations = {
     nav_skills: "Fähigkeiten",
     nav_contact: "Kontakt",
 
-    hero_title: "Ich automatisiere Systeme und lerne, sie auszuliefern",
-    hero_lead: "ASIR-Student mit Hintergrund in Systemen und Netzwerken, auf dem Weg in DevOps, CI/CD und Cloud-Infrastruktur",
-    term_line1: "ASIR · Netzwerk-IT-Systemadministration",
-    term_line2: "Schulung in AWS und Sicherheit · Accenture",
-    term_status: "Ich baue Pipelines und lerne Cloud",
+    hero_title: "Ich baue Infrastruktur und lerne, sie von Anfang an abzusichern",
+    hero_lead: "ASIR-Student mit Spezialisierung in Cybersicherheit, auf dem Weg in AWS-Cloud und DevSecOps: sichere Infrastruktur, Automatisierung und Sicherheit in CI/CD",
+    rm_link: "Auf GitHub ansehen",
+    rm_done: "Erledigt",
+    rm_now: "In Arbeit",
+    rm_next: "Als Nächstes",
+    st1: "Linux & Skripting",
+    st2: "Container",
+    st3: "Härtung",
+    st4: "Sicherheits-Scans",
+    st5: "CI/CD-Gates",
+    st6: "Cloud-IaC",
 
     projects_title: "Projekte",
     projects_intro: "Übungslabore und Umgebungen, die ich selbst aufgebaut habe",
-    p1_title: "Tägliches DevOps-Labor — Ubuntu Server",
-    p1_desc: "Praktisches Tagebuch meines Wegs in DevOps auf einem Ubuntu Server, Tag für Tag: Bash-Automatisierungsskripte, Netzwerkdiagnose, Git, Docker und Docker Compose, Infrastructure as Code mit Ansible und Terraform, CI/CD, Kubernetes, Prometheus und Grafana sowie Python. Jeden Tag ein Schritt: ein neues Skript, eine Verbesserung des vorherigen, ein weiteres Werkzeug",
+    p1_title: "DevSecOps-Labor — Ubuntu Server",
+    p1_desc: "Praxislabor, das Sicherheit auf jeder Ebene umsetzt, Schritt für Schritt dokumentiert. Bisher: Monitoring-Skripte in Bash und Python und eine containerisierte Flask-API. Als Nächstes: Linux-Härtung, sichere Container-Images, Sicherheitsprüfungen in CI/CD mit GitHub Actions und Terraform auf AWS",
     p2_title: "PostgreSQL-Zugriffskontroll-Labor",
     p2_desc: "Bereitstellung von PostgreSQL mit Docker und Konfiguration von Datenbanken, Benutzern, Rollen, Views und feingranularen Zugriffsrechten. Umsetzung von Rechtebeschränkungen sowie Backup- und Wiederherstellungsverfahren",
 
@@ -105,7 +117,7 @@ const translations = {
     edu_title: "Ausbildung",
     edu1_title: "Schulung in Cloud und Sicherheit · Accenture",
     edu1_when: "2026 – heute",
-    edu1_desc: "Aufbau praktischer Kenntnisse durch praxisnahe Schulungen in AWS, Kryptografie und Sicherheitsgrundlagen. Auf meinem Wissen über Systeme und Netzwerke aufbauend arbeite ich auf DevOps hin: Automatisierung, CI/CD und sichere Bereitstellung von Infrastruktur",
+    edu1_desc: "Aufbau praktischer Kenntnisse durch praxisnahe Schulungen in AWS, Kryptografie und Sicherheitsgrundlagen. Auf meinem Wissen über Systeme und Netzwerke aufbauend arbeite ich auf Cloud und DevSecOps hin: sichere Infrastruktur, Automatisierung und Sicherheit in CI/CD",
     edu2_title: "Höhere Berufsausbildung (CFGS) in Netzwerk-IT-Systemadministration (ASIR)",
     edu2_when: "2025 - heute · XTART FP",
     edu2_desc: "Praxisnahe Ausbildung in Betriebssystemen, Netzwerken, Systemadministration, Datenbanken und Cybersicherheit, mit starkem Fokus auf praktische Labore und Infrastrukturverwaltung",
@@ -120,9 +132,9 @@ const translations = {
     sk4_t: "Scripting",
     sk5_t: "Sprachen",
     sk5_d: "Englisch B2, Deutsch A1, Spanisch (Muttersprache)",
-    sk6_t: "Cloud & DevOps",
+    sk6_t: "Cloud & DevSecOps",
     sk7_t: "Lerne gerade",
-    hero_avail: "Auf der Suche nach meiner ersten Stelle in DevOps / Cloud",
+    hero_avail: "Offen für Möglichkeiten in Cloud & DevSecOps",
 
     contact_title: "Kontakt",
     contact_text: "Wenn du jemanden suchst, der gern lernt und arbeitet, schreib mir",
@@ -135,14 +147,12 @@ const translations = {
   const buttons = document.querySelectorAll(".lang button");
   const langGroup = document.querySelector(".lang");
   const metaDescription = document.querySelector('meta[name="description"]');
-  const terminal = document.querySelector(".terminal");
   const toTop = document.querySelector(".to-top");
 
   // El inglés se toma directamente del HTML, que es la versión original.
   const en = {
     meta_title: document.title,
     meta_description: metaDescription ? metaDescription.getAttribute("content") : "",
-    terminal_label: terminal ? terminal.getAttribute("aria-label") : "",
     lang_label: langGroup ? langGroup.getAttribute("aria-label") : "",
     top_label: toTop ? toTop.getAttribute("aria-label") : ""
   };
@@ -162,7 +172,6 @@ const translations = {
     document.documentElement.lang = lang;
     if (dict.meta_title) document.title = dict.meta_title;
     if (metaDescription && dict.meta_description) metaDescription.setAttribute("content", dict.meta_description);
-    if (terminal && dict.terminal_label) terminal.setAttribute("aria-label", dict.terminal_label);
     if (langGroup && dict.lang_label) langGroup.setAttribute("aria-label", dict.lang_label);
     if (toTop && dict.top_label) {
       toTop.setAttribute("aria-label", dict.top_label);
